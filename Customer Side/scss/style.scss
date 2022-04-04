@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+// Variables
+
+$bg-color: #ea1b2d;
+
 // Reset
 
 html, body, div, span, applet, object, iframe,
@@ -70,4 +74,66 @@ img {
 
 body {
     font-family: 'Roboto', sans-serif;
+	background: $bg-color;
+
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 4px 8px;
+		background: #fff;
+
+		.logo {
+			a {
+				img {
+					width: 58px;
+				}
+			}
+		}
+
+		nav {
+			ul {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				li {
+					a {
+						font-size: 18px;
+						padding: 8px;
+						color: $bg-color;
+						transition: 300ms all ease-in-out;
+
+						&:hover {
+							color: darken($bg-color, 4);
+						}
+					}
+				}
+			}
+		}
+
+		.registration {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			a {
+				padding: 8px 16px;
+				border: 1px solid $bg-color;
+
+				&:not(:last-child) {
+					margin-right: 8px;
+				}
+
+				&:first-child {
+					color: $bg-color;
+				}
+
+				&:last-child {
+					color: #fff;
+					background: $bg-color;
+				}
+			}
+		}
+	}
 }

@@ -65,5 +65,78 @@ img {
 
 body {
   font-family: 'Roboto', sans-serif;
+  background: #ea1b2d;
+}
+
+body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4px 8px;
+  background: #fff;
+}
+
+body header .logo a img {
+  width: 58px;
+}
+
+body header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header nav ul li a {
+  font-size: 18px;
+  padding: 8px;
+  color: #ea1b2d;
+  -webkit-transition: 300ms all ease-in-out;
+  transition: 300ms all ease-in-out;
+}
+
+body header nav ul li a:hover {
+  color: #dc1426;
+}
+
+body header .registration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .registration a {
+  padding: 8px 16px;
+  border: 1px solid #ea1b2d;
+}
+
+body header .registration a:not(:last-child) {
+  margin-right: 8px;
+}
+
+body header .registration a:first-child {
+  color: #ea1b2d;
+}
+
+body header .registration a:last-child {
+  color: #fff;
+  background: #ea1b2d;
 }
 /*# sourceMappingURL=style.css.map */
