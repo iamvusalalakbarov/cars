@@ -189,6 +189,7 @@ body main.home form {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: 32px;
 }
 
 body main.home form .pick-up, body main.home form .take-off {
@@ -215,7 +216,7 @@ body main.home form .pick-up label h6, body main.home form .take-off label h6 {
   font-size: 20px;
   font-weight: bold;
   color: #ea1b2d;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 body main.home form .pick-up label input, body main.home form .pick-up label select, body main.home form .take-off label input, body main.home form .take-off label select {
@@ -225,12 +226,17 @@ body main.home form .pick-up label input, body main.home form .pick-up label sel
 }
 
 body main.home form button {
+  width: 100%;
   padding: 8px 16px;
   font-size: 18px;
   border-radius: 4px;
   color: #fff;
   background: #ea1b2d;
   cursor: pointer;
+}
+
+body main.home form button:hover {
+  background: #dc1426;
 }
 
 body main.about h1 {
@@ -441,6 +447,70 @@ body main.contact form button {
 
 body main.contact form button:hover {
   background: #dc1426;
+}
+
+body main.vehicles h1 {
+  color: #ea1b2d;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+body main.vehicles .vehicle-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+body main.vehicles .vehicle-list .vehicle .image {
+  width: 294px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #ea1b2d;
+  border-radius: 15px;
+}
+
+body main.vehicles .vehicle-list .vehicle .image img {
+  width: 200px;
+}
+
+body main.vehicles .vehicle-list .vehicle h3 {
+  color: #ea1b2d;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  margin: 8px 0;
+}
+
+body main.vehicles .vehicle-list .vehicle a {
+  display: block;
+  width: 100%;
+  background: #ea1b2d;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 4px;
 }
 
 body footer {
