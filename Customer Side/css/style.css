@@ -246,6 +246,133 @@ body main.about p {
   margin: 8px;
 }
 
+body main.log-in .sign-in-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 50px 0;
+}
+
+body main.log-in .sign-in-page .login .login-part {
+  width: 451px;
+  background: #fff;
+  -webkit-box-shadow: 0 12px 24px 0 rgba(18, 38, 63, 0.05);
+          box-shadow: 0 12px 24px 0 rgba(18, 38, 63, 0.05);
+  border-radius: 4px;
+}
+
+body main.log-in .sign-in-page .login .login-part .cover {
+  padding: 24px;
+}
+
+body main.log-in .sign-in-page .login .login-part .cover h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ea1b2d;
+}
+
+body main.log-in .sign-in-page .login .login-part form {
+  padding: 0 28px;
+}
+
+body main.log-in .sign-in-page .login .login-part form label {
+  display: block;
+  color: #495057;
+  margin-bottom: 16px;
+}
+
+body main.log-in .sign-in-page .login .login-part form label.non-checkbox h2 {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+body main.log-in .sign-in-page .login .login-part form label.non-checkbox input {
+  font-size: 13px;
+  width: 395px;
+  height: 36px;
+  padding: 8px 12px;
+  border: 1px solid #CED4DA;
+  border-radius: 4px;
+}
+
+body main.log-in .sign-in-page .login .login-part form label.checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main.log-in .sign-in-page .login .login-part form label.checkbox span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #495057;
+  margin-left: 8px;
+}
+
+body main.log-in .sign-in-page .login .login-part form a {
+  text-decoration: none;
+  font-size: 12px;
+}
+
+body main.log-in .sign-in-page .login .login-part form a.login-btn {
+  display: block;
+  width: 100%;
+  height: 32px;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  background: #ea1b2d;
+  border-radius: 4px;
+  -webkit-transition: 200ms background-color ease-in;
+  transition: 200ms background-color ease-in;
+}
+
+body main.log-in .sign-in-page .login .login-part form a.login-btn:hover {
+  background: #d81425;
+}
+
+body main.log-in .sign-in-page .login .login-part form a.forgot-password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #74788D;
+  margin: 24px 0;
+}
+
+body main.log-in .sign-in-page .login .login-part form a.forgot-password:hover span {
+  text-decoration: underline;
+}
+
+body main.log-in .sign-in-page .login .login-part form a.forgot-password i {
+  margin-right: 4px;
+}
+
 body footer {
   width: 100%;
 }
