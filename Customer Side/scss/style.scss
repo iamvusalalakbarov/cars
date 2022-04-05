@@ -6,6 +6,10 @@ $bg-color: #ea1b2d;
 
 // Reset
 
+* {
+	box-sizing: border-box;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -56,6 +60,10 @@ table {
 
 a {
     text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 img {
@@ -74,14 +82,13 @@ img {
 
 body {
     font-family: 'Roboto', sans-serif;
-	background: $bg-color;
 
 	header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding: 4px 8px;
-		background: #fff;
+		border-bottom: 1px solid $bg-color;
 
 		.logo {
 			a {
@@ -132,6 +139,60 @@ body {
 				&:last-child {
 					color: #fff;
 					background: $bg-color;
+				}
+			}
+		}
+	}
+
+	main {
+		padding: 16px;
+		&.home {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+			form {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				.pick-up, .take-off {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					&:not(:last-child) {
+						margin-bottom: 16px;
+					}
+
+					label {
+						&:not(:last-child) {
+							margin-right: 32px;
+						}
+
+						h6 {
+							font-size: 20px;
+							font-weight: bold;
+							color: $bg-color;
+							margin-bottom: 4px;
+						}
+
+						input, select {
+							border: 1px solid $bg-color;
+							border-radius: 4px;
+							padding: 4px 8px;
+						}
+					}
+				}
+
+				button {
+					padding: 8px 16px;
+					font-size: 18px;
+					border-radius: 4px;
+					color: #fff;
+					background: $bg-color;
+					cursor: pointer;
 				}
 			}
 		}
