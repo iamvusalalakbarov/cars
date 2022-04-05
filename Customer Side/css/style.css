@@ -73,6 +73,17 @@ img {
 }
 
 body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -220,5 +231,84 @@ body main.home form button {
   color: #fff;
   background: #ea1b2d;
   cursor: pointer;
+}
+
+body footer {
+  width: 100%;
+}
+
+body footer .black-box {
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 32px 64px;
+}
+
+body footer .black-box .socials, body footer .black-box .sponsorships {
+  width: 50%;
+  text-align: center;
+}
+
+body footer .black-box .socials h4, body footer .black-box .sponsorships h4 {
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+body footer .black-box .socials div, body footer .black-box .sponsorships div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 8px;
+}
+
+body footer .black-box .socials div a, body footer .black-box .sponsorships div a {
+  color: #fff;
+}
+
+body footer .black-box .socials div a:not(:last-child), body footer .black-box .sponsorships div a:not(:last-child) {
+  margin-right: 48px;
+}
+
+body footer .black-box .socials div a i, body footer .black-box .sponsorships div a i {
+  font-size: 24px;
+}
+
+body footer .black-box .socials div img, body footer .black-box .sponsorships div img {
+  width: 100px;
+}
+
+body footer .black-box .socials div img:not(:last-child), body footer .black-box .sponsorships div img:not(:last-child) {
+  margin-right: 48px;
+}
+
+body footer .foot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer .foot p {
+  font-size: 1.2em;
 }
 /*# sourceMappingURL=style.css.map */
