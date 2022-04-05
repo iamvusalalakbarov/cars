@@ -233,6 +233,19 @@ body main.home form button {
   cursor: pointer;
 }
 
+body main.about h1 {
+  color: #ea1b2d;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+body main.about p {
+  margin: 8px;
+}
+
 body footer {
   width: 100%;
 }
@@ -306,6 +319,7 @@ body footer .foot {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 4px;
 }
 
 body footer .foot p {

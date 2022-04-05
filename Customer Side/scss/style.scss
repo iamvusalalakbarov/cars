@@ -150,6 +150,7 @@ body {
 
 	main {
 		padding: 16px;
+
 		&.home {
 			display: flex;
 			justify-content: center;
@@ -198,6 +199,21 @@ body {
 					background: $bg-color;
 					cursor: pointer;
 				}
+			}
+		}
+
+		&.about {
+			h1 {
+				color: $bg-color;
+				font-size: 2em;
+				font-weight: bold;
+				text-transform: uppercase;
+				text-align: center;
+				margin-bottom: 4px;
+			}
+
+			p {
+				margin: 8px;
 			}
 		}
 	}
@@ -256,6 +272,7 @@ body {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			padding: 4px;
 
 			p {
 				font-size: 1.2em;
