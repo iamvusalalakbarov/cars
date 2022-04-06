@@ -513,6 +513,178 @@ body main.vehicles .vehicle-list .vehicle a {
   border-radius: 4px;
 }
 
+body main.payment {
+  border-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main.payment section h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 16px;
+}
+
+body main.payment section .table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 4px solid #ea1b2d;
+  border-bottom: 4px solid #ea1b2d;
+  padding: 8px 0;
+  margin-bottom: 16px;
+}
+
+body main.payment section .table div {
+  width: 400px;
+}
+
+body main.payment section .table div h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ea1b2d;
+  margin-bottom: 8px;
+}
+
+body main.payment section .table div p {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+body main.payment section .table div.right {
+  text-align: right;
+}
+
+body main.payment section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 12px;
+}
+
+body main.payment section h2 label {
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 4px;
+}
+
+body main.payment section form.guest-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 12px;
+}
+
+body main.payment section form.guest-info input {
+  padding: 16px 12px;
+  border: 1px solid #ccc;
+  margin-bottom: 4px;
+}
+
+body main.payment section form.card-info div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main.payment section form.card-info div input {
+  padding: 16px 12px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+body main.payment section form.card-info div select {
+  padding: 16px 12px;
+  border: 1px solid #ccc;
+  width: 49.5%;
+}
+
+body main.payment section a.button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background: #ea1b2d;
+  margin-top: 24px;
+  -webkit-transition: 200ms all ease-in-out;
+  transition: 200ms all ease-in-out;
+}
+
+body main.payment section a.button:hover {
+  background: #d81425;
+}
+
+body main.payment aside {
+  height: 100vh;
+}
+
+body main.payment aside .photo img {
+  height: 240px;
+}
+
+body main.payment aside h2 {
+  margin: 8px 0;
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 4px;
+}
+
+body main.payment aside p {
+  font-size: 18px;
+  padding-left: 4px;
+  margin: 6px 0;
+}
+
+body main.payment aside a {
+  color: #ea1b2d;
+  padding-left: 4px;
+}
+
+body main.payment aside a:hover {
+  text-decoration: underline;
+}
+
 body footer {
   width: 100%;
 }

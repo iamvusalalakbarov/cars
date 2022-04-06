@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars | Payment</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="./index.html">
+                <img src="./images/cars-logo.png" alt="Cars Logo">
+            </a>
+        </div>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./vehicles.html">Vehicles</a>
+                </li>
+                <li>
+                    <a href="./about.html">About</a>
+                </li>
+                <li>
+                    <a href="./contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="registration">
+            <a href="./log-in.html">Log In</a>
+            <a href="./sign-up.html">Sign Up</a>
+        </div>
+    </header>
+
+    <main class="payment">
+        <section>
+            <h1>Payment and Customer Details</h1>
+            <div class="table">
+                <div class="left">
+                    <h3>Total for rent</h3>
+                    <p>Total rent charge</p>
+                    <p>Total taxes</p>
+                </div>
+                <div class="right">
+                    <h3>$200.02</h3>
+                    <p>$200</p>
+                    <p>$0.02</p>
+                </div>
+            </div>
+
+            <h2><label><i class="fas fa-user"></i></label>Customer Information</h2>
+            <form class="guest-info">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+                <input type="email" placeholder="Email">
+            </form>
+
+            <h2><label><i class="far fa-credit-card"></i></label>Payment</h2>
+            <form class="card-info">
+                <div>
+                    <input type="text" placeholder="Card Holder">
+                </div>
+
+                <div>
+                    <input type="text" pattern="[0-9]" minlength="16" maxlength="19" placeholder="Card Number">
+                </div>
+
+                <div>
+                    <select name="months" id="months">
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+
+                    <select name="years" id="years">
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2028">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                    </select>
+                </div>
+            </form>
+
+            <a href="#" class="button">Pay</a>
+        </section>
+
+        <aside>
+            <div class="photo">
+                <img src="images/mater.png" alt="Mater">
+            </div>
+            <h2>Mater</h2>
+            <p class="date">6 April - 8 April</p>
+            <a href="../index.html">Go Back</a>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="black-box">
+            <div class="socials">
+                <h4>Social media</h4>
+                <div>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="sponsorships">
+                <h4>Sponsorships</h4>
+                <div>
+                    <img src="images/disney.png" alt="">
+                    <img src="images/pixar.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="foot">
+            <p>&copy; All Rights Reserved</p>
+            <p>Cars</p>
+        </div>
+    </footer>
+</body>
+
+</html>
