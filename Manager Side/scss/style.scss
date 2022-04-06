@@ -236,18 +236,21 @@ body {
 				background: #fff;
 			}
 
-			&.users, &.cars, &.rents {
+			&.users, &.cars, &.rents, &.messages {
 				table {
 					width: 100%;
 
 					thead, tbody {
 						tr {
+							border-bottom: 1px solid #000;
+							
 							th {
 								font-weight: bold;
 							}
 
 							th, td {
 								padding: 4px 8px;
+								max-width: 512px;
 
 								input, select {
 									width: 100%;
