@@ -298,19 +298,19 @@ body main section .gif {
   background: #fff;
 }
 
-body main section.users table, body main section.cars table {
+body main section.users table, body main section.cars table, body main section.rents table {
   width: 100%;
 }
 
-body main section.users table thead tr th, body main section.users table tbody tr th, body main section.cars table thead tr th, body main section.cars table tbody tr th {
+body main section.users table thead tr th, body main section.users table tbody tr th, body main section.cars table thead tr th, body main section.cars table tbody tr th, body main section.rents table thead tr th, body main section.rents table tbody tr th {
   font-weight: bold;
 }
 
-body main section.users table thead tr th, body main section.users table thead tr td, body main section.users table tbody tr th, body main section.users table tbody tr td, body main section.cars table thead tr th, body main section.cars table thead tr td, body main section.cars table tbody tr th, body main section.cars table tbody tr td {
+body main section.users table thead tr th, body main section.users table thead tr td, body main section.users table tbody tr th, body main section.users table tbody tr td, body main section.cars table thead tr th, body main section.cars table thead tr td, body main section.cars table tbody tr th, body main section.cars table tbody tr td, body main section.rents table thead tr th, body main section.rents table thead tr td, body main section.rents table tbody tr th, body main section.rents table tbody tr td {
   padding: 4px 8px;
 }
 
-body main section.users table thead tr th input, body main section.users table thead tr td input, body main section.users table tbody tr th input, body main section.users table tbody tr td input, body main section.cars table thead tr th input, body main section.cars table thead tr td input, body main section.cars table tbody tr th input, body main section.cars table tbody tr td input {
+body main section.users table thead tr th input, body main section.users table thead tr th select, body main section.users table thead tr td input, body main section.users table thead tr td select, body main section.users table tbody tr th input, body main section.users table tbody tr th select, body main section.users table tbody tr td input, body main section.users table tbody tr td select, body main section.cars table thead tr th input, body main section.cars table thead tr th select, body main section.cars table thead tr td input, body main section.cars table thead tr td select, body main section.cars table tbody tr th input, body main section.cars table tbody tr th select, body main section.cars table tbody tr td input, body main section.cars table tbody tr td select, body main section.rents table thead tr th input, body main section.rents table thead tr th select, body main section.rents table thead tr td input, body main section.rents table thead tr td select, body main section.rents table tbody tr th input, body main section.rents table tbody tr th select, body main section.rents table tbody tr td input, body main section.rents table tbody tr td select {
   width: 100%;
   border: 1px solid #000;
   padding: 2px 4px;

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cars | Cars</title>
+    <title>Cars | Rents</title>
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -24,13 +24,13 @@
                     <a href="index.html"><label><i class="fas fa-home"></i></label>Dashboard</a>
                 </li>
                 <li>
-                    <a href="cars.html" class="active"><label><i class="fa-solid fa-car"></i></label>Cars</a>
+                    <a href="cars.html"><label><i class="fa-solid fa-car"></i></label>Cars</a>
                 </li>
                 <li>
                     <a href="users.html"><label><i class="fa-solid fa-user"></i></label>Users</a>
                 </li>
                 <li>
-                    <a href="rent.html"><label><i class="fa-solid fa-arrow-right-arrow-left"></i></label>Rents</a>
+                    <a href="rent.html" class="active"><label><i class="fa-solid fa-arrow-right-arrow-left"></i></label>Rents</a>
                 </li>
             </ul>
         </nav>
@@ -51,50 +51,76 @@
             </div>
         </header>
 
-        <section class="cars">
+        <section class="rents">
             <table>
                 <thead>
                     <tr>        
+                        <th>Username</th>
                         <th>Car Name</th>
-                        <th>Description</th>
-                        <th>Image Path</th>
+                        <th>Pick-up Location</th>
+                        <th>Take-off Location</th>
+                        <th>Pick-up Date</th>
+                        <th>Take-off Date</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Lightning McQueen</td>
-                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                        <td>images/lightning-mcqueen.png</td>
-                        <td><a href="#">[Delete]</a></td>
+                        <td>vusal11010</td>
+                        <td>Mater</td>
+                        <td>Radiator Springs</td>
+                        <td>Radiator Springs</td>
+                        <td>06 April 2022</td>
+                        <td>08 April 2022</td>
                     </tr>
                     <tr>
-                        <td>Lightning McQueen</td>
-                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                        <td>images/lightning-mcqueen.png</td>
-                        <td><a href="#">[Delete]</a></td>
+                        <td>vusal11010</td>
+                        <td>Mater</td>
+                        <td>Radiator Springs</td>
+                        <td>Radiator Springs</td>
+                        <td>06 April 2022</td>
+                        <td>08 April 2022</td>
                     </tr>
                     <tr>
-                        <td>Lightning McQueen</td>
-                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                        <td>images/lightning-mcqueen.png</td>
-                        <td><a href="#">[Delete]</a></td>
+                        <td>vusal11010</td>
+                        <td>Mater</td>
+                        <td>Radiator Springs</td>
+                        <td>Radiator Springs</td>
+                        <td>06 April 2022</td>
+                        <td>08 April 2022</td>
                     </tr>
                     <tr>
-                        <td>Lightning McQueen</td>
-                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                        <td>images/lightning-mcqueen.png</td>
-                        <td><a href="#">[Delete]</a></td>
+                        <td>vusal11010</td>
+                        <td>Mater</td>
+                        <td>Radiator Springs</td>
+                        <td>Radiator Springs</td>
+                        <td>06 April 2022</td>
+                        <td>08 April 2022</td>
                     </tr>
                     <tr>
-                        <td>Lightning McQueen</td>
-                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                        <td>images/lightning-mcqueen.png</td>
-                        <td><a href="#">[Delete]</a></td>
+                        <td>vusal11010</td>
+                        <td>Mater</td>
+                        <td>Radiator Springs</td>
+                        <td>Radiator Springs</td>
+                        <td>06 April 2022</td>
+                        <td>08 April 2022</td>
                     </tr>
                     <tr>
+                        <td><input type="text" placeholder="Username"></td>
                         <td><input type="text" placeholder="Car Name"></td>
-                        <td><input type="text" placeholder="Description"></td>
-                        <td><input type="file" accept="image/*"></td>
+                        <td><select>
+                            <option>---</option>
+                            <option>Baku</option>
+                            <option>Shusha</option>
+                            <option>Radiator Springs</option>
+                        </select></td>
+                        <td><select>
+                            <option>---</option>
+                            <option>Baku</option>
+                            <option>Shusha</option>
+                            <option>Radiator Springs</option>
+                        </select></td>
+                        <td><input type="date" placeholder="Pick-up Date"></td>
+                        <td><input type="date" placeholder="Take-off Date"></td>
                         <td><a href="#">[Insert]</a></td>
                     </tr>
                 </tbody>

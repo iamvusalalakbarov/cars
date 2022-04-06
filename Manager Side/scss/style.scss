@@ -236,7 +236,7 @@ body {
 				background: #fff;
 			}
 
-			&.users, &.cars {
+			&.users, &.cars, &.rents {
 				table {
 					width: 100%;
 
@@ -249,7 +249,7 @@ body {
 							th, td {
 								padding: 4px 8px;
 
-								input {
+								input, select {
 									width: 100%;
 									border: 1px solid #000;
 									padding: 2px 4px;
