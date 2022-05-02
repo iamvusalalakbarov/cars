@@ -1,48 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cars | Payment</title>
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-
-<body>
-    <header>
-        <div class="logo">
-            <a href="./index.html">
-                <img src="./images/cars-logo.png" alt="Cars Logo">
-            </a>
-        </div>
-
-        <nav>
-            <ul>
-                <li>
-                    <a href="./index.html">Home</a>
-                </li>
-                <li>
-                    <a href="./vehicles.html">Vehicles</a>
-                </li>
-                <li>
-                    <a href="./about.html">About</a>
-                </li>
-                <li>
-                    <a href="./contact.html">Contact</a>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="registration">
-            <a href="./log-in.html">Log In</a>
-            <a href="./sign-up.html">Sign Up</a>
-        </div>
-    </header>
-
-    <main class="payment">
+<main class="payment">
         <section>
             <h1>Payment and Customer Details</h1>
             <div class="table">
@@ -115,35 +71,6 @@
             </div>
             <h2>Mater</h2>
             <p class="date">6 April - 8 April</p>
-            <a href="index.html">Go Back</a>
+            <a href="index.php">Go Back</a>
         </aside>
     </main>
-
-    <footer>
-        <div class="black-box">
-            <div class="socials">
-                <h4>Social media</h4>
-                <div>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-
-            <div class="sponsorships">
-                <h4>Sponsorships</h4>
-                <div>
-                    <img src="images/disney.png" alt="">
-                    <img src="images/pixar.png" alt="">
-                </div>
-            </div>
-        </div>
-
-        <div class="foot">
-            <p>&copy; All Rights Reserved</p>
-            <p>Cars</p>
-        </div>
-    </footer>
-</body>
-
-</html>
