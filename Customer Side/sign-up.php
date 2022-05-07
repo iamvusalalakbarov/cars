@@ -7,8 +7,13 @@
                     </div>
     
                     <form>
-                        <label for="full-name" class="non-checkbox">
-                            <h2>Full Name</h2>
+                        <label for="first-name" class="non-checkbox">
+                            <h2>First Name</h2>
+                            <input type="text" id="full-name" placeholder="Enter your full name" required>
+                        </label>
+
+                        <label for="surname" class="non-checkbox">
+                            <h2>Surname</h2>
                             <input type="text" id="full-name" placeholder="Enter your full name" required>
                         </label>
     

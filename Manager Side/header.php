@@ -30,7 +30,7 @@
                     <a href="index.php?page=users" class="<?php echo ($_GET["page"] == "users") ? 'active' : '' ?>"><label><i class="fa-solid fa-user"></i></label>Users</a>
                 </li>
                 <li>
-                    <a href="index.php?page=bookings" class="<?php echo ($_GET["page"] == "bookings") ? 'active' : '' ?>"><label><i class="fa-solid fa-arrow-right-arrow-left"></i></label>Rents</a>
+                    <a href="index.php?page=bookings" class="<?php echo ($_GET["page"] == "bookings") ? 'active' : '' ?>"><label><i class="fa-solid fa-arrow-right-arrow-left"></i></label>Bookings</a>
                 </li>
                 <li>
                     <a href="index.php?page=messages" class="<?php echo ($_GET["page"] == "messages") ? 'active' : '' ?>"><label><i class="fa-solid fa-inbox"></i></label>Messages</a>
