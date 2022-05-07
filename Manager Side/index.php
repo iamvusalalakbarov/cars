@@ -1,5 +1,7 @@
 <?php
 
+require_once("connect.php");
+
 if (!isset($_GET["page"])) {
     $_GET["page"] = "log-in";
 }

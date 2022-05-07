@@ -1,5 +1,7 @@
 <?php
 
+require_once("connect.php");
+
 require_once("header.php");
 
 if (!isset($_GET["page"])) {
