@@ -31,7 +31,7 @@ switch ($_GET["page"]) {
         require_once("bookings.php");
     break;
 
-    case "bookings":
+    case "messages":
         require_once("messages.php");
     break;
 }
