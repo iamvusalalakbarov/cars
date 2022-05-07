@@ -20,7 +20,7 @@
             <input type="text" placeholder="Username" required>
             <input type="password" placeholder="Password" required>
 
-            <a href="index.html">Log In</a>
+            <a href="index.php?page=dashboard">Log In</a>
         </form>
     </main>
 </body>
