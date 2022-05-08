@@ -6,7 +6,7 @@
                     <img src="images/lightning-mcqueen2.png">
                 </div>
                 <h3>Lightning McQueen</h3>
-                <a href="payment.html">Choose Vehicle</a>
+                <a href="index.php?page=payment">Choose Vehicle</a>
             </div>
             <div class="vehicle">
                 <div class="image">
