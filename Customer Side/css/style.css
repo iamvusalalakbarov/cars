@@ -141,20 +141,20 @@ body header .registration {
           align-items: center;
 }
 
-body header .registration a {
+body header .registration a, body header .registration button {
   padding: 8px 16px;
   border: 1px solid #ea1b2d;
 }
 
-body header .registration a:not(:last-child) {
+body header .registration a:not(:last-child), body header .registration button:not(:last-child) {
   margin-right: 8px;
 }
 
-body header .registration a:first-child {
+body header .registration a:first-child, body header .registration button:first-child {
   color: #ea1b2d;
 }
 
-body header .registration a:last-child {
+body header .registration a:last-child, body header .registration button:last-child {
   color: #fff;
   background: #ea1b2d;
 }
@@ -327,12 +327,12 @@ body main.log-in .sign-in-page .login .login-part form label.checkbox span {
   margin-left: 8px;
 }
 
-body main.log-in .sign-in-page .login .login-part form a {
+body main.log-in .sign-in-page .login .login-part form button {
   text-decoration: none;
   font-size: 12px;
 }
 
-body main.log-in .sign-in-page .login .login-part form a.login-btn {
+body main.log-in .sign-in-page .login .login-part form button.login-btn {
   display: block;
   width: 100%;
   height: 32px;
@@ -353,11 +353,11 @@ body main.log-in .sign-in-page .login .login-part form a.login-btn {
   transition: 200ms background-color ease-in;
 }
 
-body main.log-in .sign-in-page .login .login-part form a.login-btn:hover {
+body main.log-in .sign-in-page .login .login-part form button.login-btn:hover {
   background: #d81425;
 }
 
-body main.log-in .sign-in-page .login .login-part form a.forgot-password {
+body main.log-in .sign-in-page .login .login-part form button.forgot-password {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -371,11 +371,11 @@ body main.log-in .sign-in-page .login .login-part form a.forgot-password {
   margin: 24px 0;
 }
 
-body main.log-in .sign-in-page .login .login-part form a.forgot-password:hover span {
+body main.log-in .sign-in-page .login .login-part form button.forgot-password:hover span {
   text-decoration: underline;
 }
 
-body main.log-in .sign-in-page .login .login-part form a.forgot-password i {
+body main.log-in .sign-in-page .login .login-part form button.forgot-password i {
   margin-right: 4px;
 }
 

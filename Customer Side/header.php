@@ -1,3 +1,9 @@
+<?php
+
+//session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,8 +42,12 @@
             </ul>
         </nav>
 
+        <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true): ?>
+        <?php echo '<h3 style="color: #ea1b2d; font-weight: bold; text-transform: capitalize;">' . $_SESSION["username"] . '</h3>'; ?>
+        <?php else: ?>
         <div class="registration">
             <a href="./index.php?page=log-in">Log In</a>
             <a href="./index.php?page=sign-up">Sign Up</a>
         </div>
+        <?php endif; ?>
     </header>
