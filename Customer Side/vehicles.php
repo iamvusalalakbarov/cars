@@ -1,5 +1,10 @@
 <?php
 
+if (!isset($_SESSION["pickupDate"]) || !isset($_SESSION["takeoffDate"])) {
+    header("Location:index.php");
+    echo '<style>alert("Dates are not picked.");</style>';
+}
+
 $cars = $db->query("SELECT * FROM cars")->fetchAll(PDO::FETCH_ASSOC);
 $bookings = $db->query("SELECT * FROM bookings")->fetchAll(PDO::FETCH_ASSOC);
 
