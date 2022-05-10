@@ -1,9 +1,3 @@
-<?php
-
-//session_start();
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,9 +23,6 @@
             <ul>
                 <li>
                     <a href="./index.php?page=home">Home</a>
-                </li>
-                <li>
-                    <a href="./index.php?page=vehicles">Vehicles</a>
                 </li>
                 <li>
                     <a href="./index.php?page=about">About</a>

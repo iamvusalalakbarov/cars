@@ -2,6 +2,8 @@
 
 session_start();
 
+date_default_timezone_set('Asia/Baku');
+
 require_once("connect.php");
 
 require_once("header.php");
