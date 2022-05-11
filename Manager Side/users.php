@@ -1,49 +1,47 @@
+<?php
+
+$users = $db->query("SELECT * FROM users")->fetchAll(PDO::FETCH_ASSOC);
+$bookings = $db->query("SELECT * FROM bookings")->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
 <section class="users">
-            <table>
-                <thead>
-                    <tr>        
-                        <th>Username</th>
-                        <th>First Name</th>
-                        <th>Surname</th>
-                        <th>E-mail</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>vusal11010</td>
-                        <td>Vusal</td>
-                        <td>Alakbarov</td>
-                        <td>vusal11010@gmail.com</td>
-                        <td><a href="#">[Delete]</a></td>
-                    </tr>
-                    <tr>
-                        <td>vusal11010</td>
-                        <td>Vusal</td>
-                        <td>Alakbarov</td>
-                        <td>vusal11010@gmail.com</td>
-                        <td><a href="#">[Delete]</a></td>
-                    </tr>
-                    <tr>
-                        <td>vusal11010</td>
-                        <td>Vusal</td>
-                        <td>Alakbarov</td>
-                        <td>vusal11010@gmail.com</td>
-                        <td><a href="#">[Delete]</a></td>
-                    </tr>
-                    <tr>
-                        <td>vusal11010</td>
-                        <td>Vusal</td>
-                        <td>Alakbarov</td>
-                        <td>vusal11010@gmail.com</td>
-                        <td><a href="#">[Delete]</a></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" placeholder="Username"></td>
-                        <td><input type="text" placeholder="First Name"></td>
-                        <td><input type="text" placeholder="Surname"></td>
-                        <td><input type="email" placeholder="E-mail"></td>
-                        <td><a href="#">[Insert]</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+    <table>
+        <thead>
+            <tr>        
+                <th>Username</th>
+                <th>First Name</th>
+                <th>Surname</th>
+                <th>E-mail</th>
+                <th>Total Reservations</th>
+                <th>Active Reservations</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($users as $user): ?>
+                <tr>
+                    <td><?php echo $user["username"]; ?></td>
+                    <td><?php echo $user["firstname"]; ?></td>
+                    <td><?php echo $user["surname"]; ?></td>
+                    <td><?php echo $user["email"]; ?></td>
+                    <?php
+                    $total = 0;
+                    $active = 0;
+
+                    foreach ($bookings as $booking) {
+                        if ($booking["user_id"] == $user["user_id"]) {
+                            $total++;
+
+                            if (strtotime($booking["takeoff_date"]) >= strtotime(date("m/d/Y"))) {
+                                $active++;
+                            }
+                        }
+                    }
+                    ?>
+                    <td><?php echo $total; ?></td>
+                    <td><?php echo $active; ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</section>
