@@ -1,5 +1,9 @@
 <?php
 
+session_start();
+
+date_default_timezone_set('Asia/Baku');
+
 require_once("connect.php");
 
 if (!isset($_GET["page"])) {
