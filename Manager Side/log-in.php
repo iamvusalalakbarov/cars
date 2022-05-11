@@ -1,7 +1,5 @@
 <?php
 
-$_SESSION["loggedin"] = false;
-
 require_once("connect.php");
 
 if (isset($_POST["submit"])) {
@@ -20,8 +18,8 @@ if (isset($_POST["submit"])) {
     }
 
     if ($flag) {
-        $_SESSION['loggedin'] = true;
-        $_SESSION['username'] = $username;
+        $_SESSION['log'] = true;
+        $_SESSION['admin'] = $username;
         header("Location:index.php?page=dashboard");
     } else {
         echo '<script>alert("Username and password does not matched!");</script>';

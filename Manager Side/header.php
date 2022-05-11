@@ -44,10 +44,10 @@
             <div class="right-side">
                 <div class="admin">
                     <div class="name">
-                            <p><?php echo $_SESSION["username"]; ?></p>
+                            <p><?php echo $_SESSION["admin"]; ?></p>
                     </div>
                     <div class="log-out">
-                        <a href="index.php?page=log-in"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                        <a href="index.php?page=log-out"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
                     </div>
             </div>
         </header>

@@ -7,7 +7,7 @@ date_default_timezone_set('Asia/Baku');
 require_once("connect.php");
 
 if (!isset($_GET["page"])) {
-    if (!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {
+    if (!isset($_SESSION["log"]) || !$_SESSION["log"]) {
         $_GET["page"] = "log-in";
     } else {
         $_GET["page"] = "dashboard";
@@ -41,6 +41,13 @@ switch ($_GET["page"]) {
 
     case "messages":
         require_once("messages.php");
+    break;
+
+    case "log-out":
+        session_destroy();
+        unset($_SESSION['log']);
+        unset($_SESSION['admin']);
+        header('Location:index.php?page=log-in');
     break;
 }
 

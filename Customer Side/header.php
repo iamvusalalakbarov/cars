@@ -9,6 +9,7 @@
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js"></script>
     <style>
         .log-out {
             color: #ea1b2d;
@@ -41,7 +42,7 @@
         <div>
             <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true): ?>
                 <?php echo '<h3 style="color: #ea1b2d; font-weight: bold; text-transform: capitalize;">' . $_SESSION["username"] . '</h3>'; ?>
-                <a class="log-out" href="index.php?page=log-in"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                <a class="log-out" href="index.php?page=log-out"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
             <?php else: ?>
             <div class="registration">
                 <a href="./index.php?page=log-in">Log In</a>

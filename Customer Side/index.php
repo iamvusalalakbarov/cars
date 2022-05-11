@@ -40,6 +40,13 @@ switch ($_GET["page"]) {
     case "payment":
         require_once("payment.php");
     break;
+
+    case "log-out":
+        session_destroy();
+        unset($_SESSION['loggedin']);
+        unset($_SESSION['username']);
+        header('Location:index.php?page=log-in');
+    break;
 }
 
 require_once("footer.php");
