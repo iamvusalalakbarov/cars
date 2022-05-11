@@ -1,3 +1,9 @@
+<?php
+
+$messages = $db->query("SELECT * FROM messages")->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
 <section class="messages">
             <table>
                 <thead>
@@ -9,30 +15,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Vusal</td>
-                        <td>Alakbarov</td>
-                        <td>vusal11010@gmail.com</td>
-                        <td><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur eum accusamus obcaecati tenetur nostrum exercitationem omnis, ullam vero a sit praesentium, quidem deleniti consectetur debitis ratione enim blanditiis voluptates eaque velit perspiciatis sint, expedita corporis. Excepturi quisquam porro molestiae! Dolore tempore consectetur quia repellat labore earum aliquid, totam necessitatibus delectus!</p></td>
-                    </tr>
-                    <tr>
-                        <td>Vusal</td>
-                        <td>Alakbarov</td>
-                        <td>vusal11010@gmail.com</td>
-                        <td><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur eum accusamus obcaecati tenetur nostrum exercitationem omnis, ullam vero a sit praesentium, quidem deleniti consectetur debitis ratione enim blanditiis voluptates eaque velit perspiciatis sint, expedita corporis. Excepturi quisquam porro molestiae! Dolore tempore consectetur quia repellat labore earum aliquid, totam necessitatibus delectus!</p></td>
-                    </tr>
-                    <tr>
-                        <td>Vusal</td>
-                        <td>Alakbarov</td>
-                        <td>vusal11010@gmail.com</td>
-                        <td><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur eum accusamus obcaecati tenetur nostrum exercitationem omnis, ullam vero a sit praesentium, quidem deleniti consectetur debitis ratione enim blanditiis voluptates eaque velit perspiciatis sint, expedita corporis. Excepturi quisquam porro molestiae! Dolore tempore consectetur quia repellat labore earum aliquid, totam necessitatibus delectus!</p></td>
-                    </tr>
-                    <tr>
-                        <td>Vusal</td>
-                        <td>Alakbarov</td>
-                        <td>vusal11010@gmail.com</td>
-                        <td><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur eum accusamus obcaecati tenetur nostrum exercitationem omnis, ullam vero a sit praesentium, quidem deleniti consectetur debitis ratione enim blanditiis voluptates eaque velit perspiciatis sint, expedita corporis. Excepturi quisquam porro molestiae! Dolore tempore consectetur quia repellat labore earum aliquid, totam necessitatibus delectus!</p></td>
-                    </tr>
+                    <?php foreach ($messages as $message): ?>
+                        <tr>
+                            <td><?php echo $message["firstname"]; ?></td>
+                            <td><?php echo $message["surname"]; ?></td>
+                            <td><?php echo $message["email"]; ?></td>
+                            <td><p><?php echo $message["message"]; ?></p></td>
+                        </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </section>
