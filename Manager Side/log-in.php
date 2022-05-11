@@ -1,5 +1,7 @@
 <?php
 
+$_SESSION["loggedin"] = false;
+
 require_once("connect.php");
 
 if (isset($_POST["submit"])) {

@@ -44,12 +44,10 @@
             <div class="right-side">
                 <div class="admin">
                     <div class="name">
-                        <p>
-                            Vusal Alakbarov
-                        </p>
+                            <p><?php echo $_SESSION["username"]; ?></p>
                     </div>
                     <div class="log-out">
-                        <a href="log-in.php"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                        <a href="index.php?page=log-in"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
                     </div>
             </div>
         </header>

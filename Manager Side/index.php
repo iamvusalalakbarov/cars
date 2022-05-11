@@ -7,7 +7,11 @@ date_default_timezone_set('Asia/Baku');
 require_once("connect.php");
 
 if (!isset($_GET["page"])) {
-    $_GET["page"] = "log-in";
+    if (!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {
+        $_GET["page"] = "log-in";
+    } else {
+        $_GET["page"] = "dashboard";
+    }
 }
 
 if ($_GET["page"] != "log-in") {
