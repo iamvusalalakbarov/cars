@@ -56,6 +56,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 img {
   border: 0;
 }
@@ -69,51 +73,242 @@ img {
 }
 
 body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-family: 'Roboto', sans-serif;
+}
+
+body header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
-  overflow: hidden;
-}
-
-body aside {
-  width: 320px;
-  border-right: 1px solid grey;
-}
-
-body aside .logo {
-  height: 54px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 12px;
-  border-bottom: 1px solid grey;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  background: #fff;
+  padding: 4px 8px;
+  border-bottom: 1px solid #ea1b2d;
 }
 
-body aside .logo img {
+body header .logo a img {
   width: 58px;
 }
 
-body aside nav ul li a {
+body header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header nav ul li a {
+  font-size: 18px;
+  padding: 8px;
+  color: #ea1b2d;
+  -webkit-transition: 300ms all ease-in-out;
+  transition: 300ms all ease-in-out;
+}
+
+body header nav ul li a:hover {
+  color: #dc1426;
+}
+
+body header .registration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .registration a, body header .registration button {
+  padding: 8px 16px;
+  border: 1px solid #ea1b2d;
+}
+
+body header .registration a:not(:last-child), body header .registration button:not(:last-child) {
+  margin-right: 8px;
+}
+
+body header .registration a:first-child, body header .registration button:first-child {
+  color: #ea1b2d;
+}
+
+body header .registration a:last-child, body header .registration button:last-child {
+  color: #fff;
+  background: #ea1b2d;
+}
+
+body main {
+  padding: 16px;
+}
+
+body main.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main.home form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 32px;
+}
+
+body main.home form .pick-up, body main.home form .take-off {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main.home form .pick-up:not(:last-child), body main.home form .take-off:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+body main.home form .pick-up label:not(:last-child), body main.home form .take-off label:not(:last-child) {
+  margin-right: 32px;
+}
+
+body main.home form .pick-up label h6, body main.home form .take-off label h6 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ea1b2d;
+  margin-bottom: 8px;
+}
+
+body main.home form .pick-up label input, body main.home form .pick-up label select, body main.home form .take-off label input, body main.home form .take-off label select {
+  border: 1px solid #ea1b2d;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+body main.home form button {
   width: 100%;
-  font-size: 16px;
-  padding: 16px 12px;
-  color: #000;
-  border-bottom: 1px solid gray;
-  -webkit-transition: 200ms all ease-in;
-  transition: 200ms all ease-in;
+  padding: 8px 16px;
+  font-size: 18px;
+  border-radius: 4px;
+  color: #fff;
+  background: #ea1b2d;
+  cursor: pointer;
+}
+
+body main.home form button:hover {
+  background: #dc1426;
+}
+
+body main.about h1 {
+  color: #ea1b2d;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+body main.about p {
+  margin: 8px;
+}
+
+body main.log-in .sign-in-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 50px 0;
+}
+
+body main.log-in .sign-in-page .login .login-part {
+  width: 451px;
+  background: #fff;
+  -webkit-box-shadow: 0 12px 24px 0 rgba(18, 38, 63, 0.05);
+          box-shadow: 0 12px 24px 0 rgba(18, 38, 63, 0.05);
+  border-radius: 4px;
+}
+
+body main.log-in .sign-in-page .login .login-part .cover {
+  padding: 24px;
+}
+
+body main.log-in .sign-in-page .login .login-part .cover h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ea1b2d;
+}
+
+body main.log-in .sign-in-page .login .login-part form {
+  padding: 0 28px;
+}
+
+body main.log-in .sign-in-page .login .login-part form label {
+  display: block;
+  color: #495057;
+  margin-bottom: 16px;
+}
+
+body main.log-in .sign-in-page .login .login-part form label.non-checkbox h2 {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+body main.log-in .sign-in-page .login .login-part form label.non-checkbox input {
+  font-size: 13px;
+  width: 395px;
+  height: 36px;
+  padding: 8px 12px;
+  border: 1px solid #CED4DA;
+  border-radius: 4px;
+}
+
+body main.log-in .sign-in-page .login .login-part form label.checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,14 +320,269 @@ body aside nav ul li a {
           align-items: center;
 }
 
-body aside nav ul li a.active, body aside nav ul li a:hover {
-  color: #ea1b2d;
+body main.log-in .sign-in-page .login .login-part form label.checkbox span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #495057;
+  margin-left: 8px;
 }
 
-body aside nav ul li a label {
+body main.log-in .sign-in-page .login .login-part form button {
+  text-decoration: none;
+  font-size: 12px;
+}
+
+body main.log-in .sign-in-page .login .login-part form button.login-btn {
+  display: block;
+  width: 100%;
+  height: 32px;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  background: #ea1b2d;
+  border-radius: 4px;
+  -webkit-transition: 200ms background-color ease-in;
+  transition: 200ms background-color ease-in;
+}
+
+body main.log-in .sign-in-page .login .login-part form button.login-btn:hover {
+  background: #d81425;
+}
+
+body main.log-in .sign-in-page .login .login-part form button.forgot-password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #74788D;
+  margin: 24px 0;
+}
+
+body main.log-in .sign-in-page .login .login-part form button.forgot-password:hover span {
+  text-decoration: underline;
+}
+
+body main.log-in .sign-in-page .login .login-part form button.forgot-password i {
+  margin-right: 4px;
+}
+
+body main.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main.contact h1 {
+  color: #ea1b2d;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+body main.contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+}
+
+body main.contact form input, body main.contact form textarea {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #ea1b2d;
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+body main.contact form input:not(:last-child), body main.contact form textarea:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+body main.contact form textarea {
+  resize: none;
+  height: 90px;
+}
+
+body main.contact form button {
+  width: 100%;
+  background: #ea1b2d;
+  border-radius: 4px;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+body main.contact form button:hover {
+  background: #dc1426;
+}
+
+body main.vehicles h1 {
+  color: #ea1b2d;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+body main.vehicles .vehicle-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+body main.vehicles .vehicle-list .vehicle .image {
+  width: 294px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #ea1b2d;
+  border-radius: 15px;
+}
+
+body main.vehicles .vehicle-list .vehicle .image img {
+  width: 200px;
+}
+
+body main.vehicles .vehicle-list .vehicle h3 {
+  color: #ea1b2d;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  margin: 8px 0;
+}
+
+body main.vehicles .vehicle-list .vehicle a {
+  display: block;
+  width: 100%;
+  background: #ea1b2d;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+body main.payment {
+  border-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main.payment section h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 16px;
+}
+
+body main.payment section .table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 4px solid #ea1b2d;
+  border-bottom: 4px solid #ea1b2d;
+  padding: 8px 0;
+  margin-bottom: 16px;
+}
+
+body main.payment section .table div {
+  width: 400px;
+}
+
+body main.payment section .table div h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ea1b2d;
+  margin-bottom: 8px;
+}
+
+body main.payment section .table div p {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+body main.payment section .table div.right {
+  text-align: right;
+}
+
+body main.payment section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 12px;
+}
+
+body main.payment section h2 label {
   width: 32px;
   height: 32px;
-  border-radius: 50%;
+  border-radius: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,9 +595,7 @@ body aside nav ul li a label {
   margin-right: 4px;
 }
 
-body main {
-  width: 100%;
-  height: 100vh;
+body main.payment section form.guest-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,201 +603,165 @@ body main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  margin-bottom: 12px;
 }
 
-body main.manager-log-in {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body main.manager-log-in form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body main.manager-log-in form h1 {
-  font-weight: bold;
-  font-size: 32px;
-  text-align: center;
-  margin-bottom: 16px;
-  color: #ea1b2d;
-}
-
-body main.manager-log-in form input {
-  border: 1px solid #000;
-  padding: 12px 24px;
-  margin-bottom: 8px;
-}
-
-body main.manager-log-in form a, body main.manager-log-in form button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 8px 16px;
-  width: 100%;
-  background: #ea1b2d;
-  color: #fff;
-  font-size: 18px;
-}
-
-body main header {
-  height: 60px;
-  border-bottom: 1px solid grey;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+body main.payment section form.guest-info input {
   padding: 16px 12px;
-  color: #000;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  background: #fff;
+  border: 1px solid #ccc;
+  margin-bottom: 4px;
 }
 
-body main header .log-out i {
+body main.payment section form.card-info div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main.payment section form.card-info div input {
+  padding: 16px 12px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+body main.payment section form.card-info div select {
+  padding: 16px 12px;
+  border: 1px solid #ccc;
+  width: 49.5%;
+}
+
+body main.payment section a.button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background: #ea1b2d;
+  margin-top: 24px;
+  -webkit-transition: 200ms all ease-in-out;
+  transition: 200ms all ease-in-out;
+}
+
+body main.payment section a.button:hover {
+  background: #d81425;
+}
+
+body main.payment aside {
+  height: 100vh;
+}
+
+body main.payment aside .photo img {
+  height: 240px;
+}
+
+body main.payment aside h2 {
+  margin: 8px 0;
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 4px;
+}
+
+body main.payment aside p {
+  font-size: 18px;
+  padding-left: 4px;
+  margin: 6px 0;
+}
+
+body main.payment aside a {
   color: #ea1b2d;
+  padding-left: 4px;
 }
 
-body main header .right-side {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: auto;
-}
-
-body main header .right-side .admin {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 16px;
-}
-
-body main header .right-side .admin .name {
-  margin-right: 16px;
-}
-
-body main header .right-side .admin .name p {
-  font-weight: 500;
-}
-
-body main section {
-  height: 100%;
-  overflow: auto;
-  padding: 16px;
-}
-
-body main section .gif {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #fff;
-}
-
-body main section.users table, body main section.cars table, body main section.rents table, body main section.messages table {
-  width: 100%;
-}
-
-body main section.users table thead tr, body main section.users table tbody tr, body main section.cars table thead tr, body main section.cars table tbody tr, body main section.rents table thead tr, body main section.rents table tbody tr, body main section.messages table thead tr, body main section.messages table tbody tr {
-  border-bottom: 1px solid #000;
-}
-
-body main section.users table thead tr th, body main section.users table tbody tr th, body main section.cars table thead tr th, body main section.cars table tbody tr th, body main section.rents table thead tr th, body main section.rents table tbody tr th, body main section.messages table thead tr th, body main section.messages table tbody tr th {
-  font-weight: bold;
-}
-
-body main section.users table thead tr th, body main section.users table thead tr td, body main section.users table tbody tr th, body main section.users table tbody tr td, body main section.cars table thead tr th, body main section.cars table thead tr td, body main section.cars table tbody tr th, body main section.cars table tbody tr td, body main section.rents table thead tr th, body main section.rents table thead tr td, body main section.rents table tbody tr th, body main section.rents table tbody tr td, body main section.messages table thead tr th, body main section.messages table thead tr td, body main section.messages table tbody tr th, body main section.messages table tbody tr td {
-  padding: 4px 8px;
-  max-width: 512px;
-}
-
-body main section.users table thead tr th input, body main section.users table thead tr th select, body main section.users table thead tr td input, body main section.users table thead tr td select, body main section.users table tbody tr th input, body main section.users table tbody tr th select, body main section.users table tbody tr td input, body main section.users table tbody tr td select, body main section.cars table thead tr th input, body main section.cars table thead tr th select, body main section.cars table thead tr td input, body main section.cars table thead tr td select, body main section.cars table tbody tr th input, body main section.cars table tbody tr th select, body main section.cars table tbody tr td input, body main section.cars table tbody tr td select, body main section.rents table thead tr th input, body main section.rents table thead tr th select, body main section.rents table thead tr td input, body main section.rents table thead tr td select, body main section.rents table tbody tr th input, body main section.rents table tbody tr th select, body main section.rents table tbody tr td input, body main section.rents table tbody tr td select, body main section.messages table thead tr th input, body main section.messages table thead tr th select, body main section.messages table thead tr td input, body main section.messages table thead tr td select, body main section.messages table tbody tr th input, body main section.messages table tbody tr th select, body main section.messages table tbody tr td input, body main section.messages table tbody tr td select {
-  width: 100%;
-  border: 1px solid #000;
-  padding: 2px 4px;
-}
-
-body main footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 32px 12px;
-  background: gray;
-  color: #000;
-  border-top: 1px solid grey;
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 0;
-  z-index: 1;
-}
-
-body main footer p {
-  font-size: 14px;
-}
-
-body main footer p a {
-  color: #094991;
-}
-
-body main footer p a:hover {
+body main.payment aside a:hover {
   text-decoration: underline;
+}
+
+body footer {
+  width: 100%;
+}
+
+body footer .black-box {
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 32px 64px;
+}
+
+body footer .black-box .socials, body footer .black-box .sponsorships {
+  width: 50%;
+  text-align: center;
+}
+
+body footer .black-box .socials h4, body footer .black-box .sponsorships h4 {
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+body footer .black-box .socials div, body footer .black-box .sponsorships div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 8px;
+}
+
+body footer .black-box .socials div a, body footer .black-box .sponsorships div a {
+  color: #fff;
+}
+
+body footer .black-box .socials div a:not(:last-child), body footer .black-box .sponsorships div a:not(:last-child) {
+  margin-right: 48px;
+}
+
+body footer .black-box .socials div a i, body footer .black-box .sponsorships div a i {
+  font-size: 24px;
+}
+
+body footer .black-box .socials div img, body footer .black-box .sponsorships div img {
+  width: 100px;
+}
+
+body footer .black-box .socials div img:not(:last-child), body footer .black-box .sponsorships div img:not(:last-child) {
+  margin-right: 48px;
+}
+
+body footer .foot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4px;
+}
+
+body footer .foot p {
+  font-size: 1.2em;
 }
 /*# sourceMappingURL=style.css.map */

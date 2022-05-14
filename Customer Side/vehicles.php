@@ -26,22 +26,20 @@ $bookings = $db->query("SELECT * FROM bookings")->fetchAll(PDO::FETCH_ASSOC);
             <?php foreach ($cars as $car): ?>
                 <?php
 
-                $flag = true;
+                $i = $car["quantity"];
                 
                 foreach ($bookings as $booking) {
                     if ($booking["car_id"] == $car["car_id"]) {
                         if ($_SESSION["pickupDate"] >= $booking["pickup_date"] && $_SESSION["pickupDate"] <= $booking["takeoff_date"]) {
-                            $flag = false;
-                            break;
+                            $i--;
                         } else if ($_SESSION["takeoffDate"] >= $booking["pickup_date"] && $_SESSION["takeoffDate"] <= $booking["takeoff_date"]) {
-                            $flag = false;
-                            break;
+                            $i--;
                         }
                     }
                 }
 
                 ?>
-                <?php if ($flag): ?>
+                <?php if ($i > 0): ?>
                     <div class="vehicle">
                         <div class="image">
                             <img src="<?php echo "images/" . $car["car_filename"]; ?>">

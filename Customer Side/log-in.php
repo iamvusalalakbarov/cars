@@ -68,11 +68,6 @@ if (isset($_POST["submit"])) {
                         <input type="hidden" name="submit" value="1">
 
                         <button class="new-log-btn" type="submit">Log In</button>
-        
-                        <a href="#" class="forgot-password">
-                            <i class="fa-solid fa-lock"></i>
-                            <span>Forgot your password?</span>
-                        </a>
                     </form>
                 </div>
             </div>
