@@ -47,6 +47,10 @@ switch ($_GET["page"]) {
         unset($_SESSION['username']);
         header('Location:index.php?page=log-in');
     break;
+
+    case "review":
+        require_once("review.php");
+    break;
 }
 
 require_once("footer.php");

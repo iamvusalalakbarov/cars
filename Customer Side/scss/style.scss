@@ -151,6 +151,37 @@ body {
 	main {
 		padding: 16px;
 
+		&.review {
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+			top: 50px;
+			left: 50%;
+			transform: translateX(-50%);
+
+			h1 {
+				text-align: center;
+				color: $bg-color;
+				font-weight: bold;
+				font-size: 36px;
+				margin-bottom: 18px;
+			}
+
+			table {
+				thead, tbody {
+					th {
+						font-weight: bold;
+					}
+				}
+
+				tr, th, td {
+					text-align: center;
+					border: 1px solid #000;
+					padding: 4px;
+				}
+			}
+		}
+
 		&.home {
 			display: flex;
 			justify-content: center;
@@ -443,7 +474,7 @@ body {
             display: flex;
             justify-content: space-between;
 
-            section {
+            .new-form {
                 h1 {
                     font-size: 36px;
                     font-weight: 700;
@@ -499,7 +530,7 @@ body {
                     }
                 }
 
-                form {
+                .new-card {
                     &.guest-info {
                         display: flex;
                         flex-direction: column;
@@ -536,7 +567,7 @@ body {
                     }
                 }
 
-                a.button {
+                button.button {
 					display: block;
                     width: 100%;
                     text-align: center;
@@ -547,6 +578,7 @@ body {
                     background: $bg-color;
                     margin-top: 24px;
                     transition: 200ms all ease-in-out;
+					cursor: pointer;
 
                     &:hover {
                         background: darken($bg-color, 5);

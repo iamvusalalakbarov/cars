@@ -163,6 +163,39 @@ body main {
   padding: 16px;
 }
 
+body main.review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+body main.review h1 {
+  text-align: center;
+  color: #ea1b2d;
+  font-weight: bold;
+  font-size: 36px;
+  margin-bottom: 18px;
+}
+
+body main.review table thead th, body main.review table tbody th {
+  font-weight: bold;
+}
+
+body main.review table tr, body main.review table th, body main.review table td {
+  text-align: center;
+  border: 1px solid #000;
+  padding: 4px;
+}
+
 body main.home {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -523,14 +556,14 @@ body main.payment {
           justify-content: space-between;
 }
 
-body main.payment section h1 {
+body main.payment .new-form h1 {
   font-size: 36px;
   font-weight: 700;
   color: #000;
   margin-bottom: 16px;
 }
 
-body main.payment section .table {
+body main.payment .new-form .table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -546,27 +579,27 @@ body main.payment section .table {
   margin-bottom: 16px;
 }
 
-body main.payment section .table div {
+body main.payment .new-form .table div {
   width: 400px;
 }
 
-body main.payment section .table div h3 {
+body main.payment .new-form .table div h3 {
   font-size: 28px;
   font-weight: 700;
   color: #ea1b2d;
   margin-bottom: 8px;
 }
 
-body main.payment section .table div p {
+body main.payment .new-form .table div p {
   font-size: 20px;
   margin-bottom: 4px;
 }
 
-body main.payment section .table div.right {
+body main.payment .new-form .table div.right {
   text-align: right;
 }
 
-body main.payment section h2 {
+body main.payment .new-form h2 {
   font-size: 24px;
   font-weight: 700;
   color: #000;
@@ -579,7 +612,7 @@ body main.payment section h2 {
   margin-bottom: 12px;
 }
 
-body main.payment section h2 label {
+body main.payment .new-form h2 label {
   width: 32px;
   height: 32px;
   border-radius: 32px;
@@ -595,7 +628,7 @@ body main.payment section h2 label {
   margin-right: 4px;
 }
 
-body main.payment section form.guest-info {
+body main.payment .new-form .new-card.guest-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -606,13 +639,13 @@ body main.payment section form.guest-info {
   margin-bottom: 12px;
 }
 
-body main.payment section form.guest-info input {
+body main.payment .new-form .new-card.guest-info input {
   padding: 16px 12px;
   border: 1px solid #ccc;
   margin-bottom: 4px;
 }
 
-body main.payment section form.card-info div:last-child {
+body main.payment .new-form .new-card.card-info div:last-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -624,20 +657,20 @@ body main.payment section form.card-info div:last-child {
           align-items: center;
 }
 
-body main.payment section form.card-info div input {
+body main.payment .new-form .new-card.card-info div input {
   padding: 16px 12px;
   border: 1px solid #ccc;
   width: 100%;
   margin-bottom: 4px;
 }
 
-body main.payment section form.card-info div select {
+body main.payment .new-form .new-card.card-info div select {
   padding: 16px 12px;
   border: 1px solid #ccc;
   width: 49.5%;
 }
 
-body main.payment section a.button {
+body main.payment .new-form button.button {
   display: block;
   width: 100%;
   text-align: center;
@@ -649,9 +682,10 @@ body main.payment section a.button {
   margin-top: 24px;
   -webkit-transition: 200ms all ease-in-out;
   transition: 200ms all ease-in-out;
+  cursor: pointer;
 }
 
-body main.payment section a.button:hover {
+body main.payment .new-form button.button:hover {
   background: #d81425;
 }
 
