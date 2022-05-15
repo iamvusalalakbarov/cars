@@ -14,6 +14,10 @@
         .log-out {
             color: #ea1b2d;
         }
+        .right-top a {
+            margin-right: 8px;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -39,9 +43,9 @@
             </ul>
         </nav>
 
-        <div>
+        <div class="right-top">
             <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true): ?>
-                <?php echo '<h3 style="color: #ea1b2d; font-weight: bold; text-transform: capitalize;">' . $_SESSION["username"] . '</h3>'; ?>
+                <?php echo '<a href="index.php?page=profile" style="color: #ea1b2d; font-weight: bold; text-transform: capitalize;">' . $_SESSION["username"] . '</a>'; ?>
                 <a class="log-out" href="index.php?page=log-out"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
             <?php else: ?>
             <div class="registration">

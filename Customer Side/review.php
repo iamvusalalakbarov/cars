@@ -1,9 +1,3 @@
-<?php
-
-
-
-?>
-
 <main class="review">
     <h1>Review</h1>
     <table>

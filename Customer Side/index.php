@@ -51,6 +51,10 @@ switch ($_GET["page"]) {
     case "review":
         require_once("review.php");
     break;
+
+    case "profile":
+        require_once("profile.php");
+    break;
 }
 
 require_once("footer.php");

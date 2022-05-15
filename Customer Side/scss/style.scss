@@ -151,7 +151,7 @@ body {
 	main {
 		padding: 16px;
 
-		&.review {
+		&.review, &.profile {
 			display: flex;
 			flex-direction: column;
 			position: absolute;
