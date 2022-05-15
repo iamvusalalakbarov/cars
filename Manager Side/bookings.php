@@ -103,6 +103,7 @@ if (isset($_POST["update"])) {
     <table>
         <thead>
             <tr>        
+                <th>Booking ID</th>
                 <th>Username</th>
                 <th>Car Name</th>
                 <th>Pick-up Date</th>
@@ -113,6 +114,9 @@ if (isset($_POST["update"])) {
             <?php foreach ($bookings as $booking): ?>
                 <tr>
                     <form method="POST">
+                        <td>
+                            <?php echo $booking["booking_id"]; ?>
+                        </td>
                         <td>
                             <?php echo $booking["username"]; ?>
                             <input type="hidden" name="user_id" value="<?php echo $booking["user_id"]; ?>">
