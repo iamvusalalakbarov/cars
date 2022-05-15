@@ -33,6 +33,9 @@
                     <a href="index.php?page=bookings" class="<?php echo ($_GET["page"] == "bookings") ? 'active' : '' ?>"><label><i class="fa-solid fa-arrow-right-arrow-left"></i></label>Bookings</a>
                 </li>
                 <li>
+                    <a href="index.php?page=payments" class="<?php echo ($_GET["page"] == "payments") ? 'active' : '' ?>"><label><i class="fa-solid fa-money-check-dollar"></i></label>Payments</a>
+                </li>
+                <li>
                     <a href="index.php?page=messages" class="<?php echo ($_GET["page"] == "messages") ? 'active' : '' ?>"><label><i class="fa-solid fa-inbox"></i></label>Messages</a>
                 </li>
             </ul>

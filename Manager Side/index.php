@@ -39,6 +39,10 @@ switch ($_GET["page"]) {
         require_once("bookings.php");
     break;
 
+    case "payments":
+        require_once("payments.php");
+    break;
+
     case "messages":
         require_once("messages.php");
     break;
