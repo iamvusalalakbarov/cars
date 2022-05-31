@@ -38,6 +38,9 @@
                 <li>
                     <a href="index.php?page=messages" class="<?php echo ($_GET["page"] == "messages") ? 'active' : '' ?>"><label><i class="fa-solid fa-inbox"></i></label>Messages</a>
                 </li>
+                <li>
+                    <a href="index.php?page=breakdowns" class="<?php echo ($_GET["page"] == "breakdowns") ? 'active' : '' ?>"><label><i class="fa-solid fa-screwdriver-wrench"></i></label>Breakdowns</a>
+                </li>
             </ul>
         </nav>
     </aside>

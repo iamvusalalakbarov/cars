@@ -47,6 +47,10 @@ switch ($_GET["page"]) {
         require_once("messages.php");
     break;
 
+    case "breakdowns":
+        require_once("breakdowns.php");
+    break;
+
     case "log-out":
         session_destroy();
         unset($_SESSION['log']);

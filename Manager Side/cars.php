@@ -61,6 +61,32 @@ if (isset($_POST["update"])) {
     }
 }
 
+if (isset($_POST["breakdown"])) {
+    $car_id = $_POST["breakdown"];
+    
+    foreach ($cars as $car) {
+        if ($car_id == $car["car_id"]) {
+            $remains = $car["quantity"] - 1;
+        }
+    }
+
+
+    $query = $db->prepare(
+        "INSERT INTO breakdowns SET
+        car_id = ?"
+        );
+    $insert = $query->execute([$car_id]);
+
+    $query = $db->prepare(
+        "UPDATE cars SET
+        quantity = ?
+        WHERE car_id = ?"
+    );
+    $update = $query->execute([$remains, $car_id]);
+
+    header("Location:index.php?page=breakdowns");
+}
+
 ?>
 
 <section class="cars">
@@ -76,18 +102,22 @@ if (isset($_POST["update"])) {
         </thead>
         <tbody>
             <?php foreach ($cars as $car): ?>
-                <form method="POST">
                     <tr>
-                        <td><input type="text" name="name" placeholder="Car Name" required value="<?php echo $car["car_name"]; ?>"></td>
-                        <td><input type="text" name="desc" placeholder="Car Name" required value="<?php echo $car["car_desc"]; ?>"></td>
-                        <td><input type="text" name="filename" placeholder="Car Name" required value="<?php echo $car["car_filename"]; ?>"></td>
-                        <td><input type="text" name="price" placeholder="Car Name" required value="<?php echo $car["car_price"]; ?>"></td>
-                        <td><input type="text" name="quantity" placeholder="Car Name" required value="<?php echo $car["quantity"]; ?>"></td>
-                        <input type="hidden" name="update" value="<?php echo $car["car_id"]; ?>">
-                        <td><button type="submit">[Update]</button></td>
+                        <form method="POST">
+                            <td><input type="text" name="name" placeholder="Car Name" required value="<?php echo $car["car_name"]; ?>"></td>
+                            <td><input type="text" name="desc" placeholder="Car Name" required value="<?php echo $car["car_desc"]; ?>"></td>
+                            <td><input type="text" name="filename" placeholder="Car Name" required value="<?php echo $car["car_filename"]; ?>"></td>
+                            <td><input type="text" name="price" placeholder="Car Name" required value="<?php echo $car["car_price"]; ?>"></td>
+                            <td><input type="text" name="quantity" placeholder="Car Name" required value="<?php echo $car["quantity"]; ?>"></td>
+                            <input type="hidden" name="update" value="<?php echo $car["car_id"]; ?>">
+                            <td><button type="submit">[Update]</button></td>
+                        </form>
+                        <form method="POST">
+                            <input type="hidden" name="breakdown" value="<?php echo $car["car_id"]; ?>">
+                            <td><button type="submit">[Breakdown]</button></td>
+                        </form>
                         <td><a class="review-link" href="index.php?page=bookings&carid=<?php echo $car["car_id"] ?>">[Select]</a></td>
                     </tr>
-                </form>
             <?php endforeach; ?>
             <tr>
                 <form method="POST">
