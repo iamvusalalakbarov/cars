@@ -85,6 +85,7 @@ if (isset($_POST["update"])) {
                         <td><input type="text" name="quantity" placeholder="Car Name" required value="<?php echo $car["quantity"]; ?>"></td>
                         <input type="hidden" name="update" value="<?php echo $car["car_id"]; ?>">
                         <td><button type="submit">[Update]</button></td>
+                        <td><a class="review-link" href="index.php?page=bookings&carid=<?php echo $car["car_id"] ?>">[Select]</a></td>
                     </tr>
                 </form>
             <?php endforeach; ?>
