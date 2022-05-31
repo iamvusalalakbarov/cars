@@ -228,6 +228,10 @@ body {
 			overflow: auto;
 			padding: 16px;
 
+			.review-link {
+				color: $bg-color;
+			}
+
 			.gif {
 				height: 100%;
 				display: flex;

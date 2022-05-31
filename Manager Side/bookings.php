@@ -111,39 +111,77 @@ if (isset($_POST["update"])) {
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($bookings as $booking): ?>
-                <tr>
-                    <form method="POST">
-                        <td>
-                            <?php echo $booking["booking_id"]; ?>
-                        </td>
-                        <td>
-                            <?php echo $booking["username"]; ?>
-                            <input type="hidden" name="user_id" value="<?php echo $booking["user_id"]; ?>">
-                        </td>
-                        <td>
-                            <?php echo $booking["car_name"]; ?>
-                            <input type="hidden" name="car_id" value="<?php echo $booking["car_id"]; ?>">
-                        </td>
-                        <td>
-                            <input type="date" name="pickup_date" value="<?php echo $booking["pickup_date"]; ?>" required>
-                        </td>
-                        <td>
-                            <input type="date" name="takeoff_date" value="<?php echo $booking["takeoff_date"]; ?>" required>
-                        </td>
-                        <td>
-                            <input type="hidden" name="update" value="<?php echo $booking["booking_id"]; ?>">
-                            <button type="submit">[Update Booking]</button>
-                        </td>
-                    </form>
-                    <form method="POST">
-                        <td>
-                            <input type="hidden" name="delete" value="<?php echo $booking["booking_id"]; ?>">
-                            <button type="submit">[Cancel Booking]</button>
-                        </td>
-                    </form>
-                </tr>
-            <?php endforeach; ?>
+            <?php if (isset($_GET["userid"])): ?>
+                <?php foreach ($bookings as $booking): ?>
+                    <?php if ($_GET["userid"] == $booking["user_id"]): ?>
+                        <tr>
+                            <form method="POST">
+                                <td>
+                                    <?php echo $booking["booking_id"]; ?>
+                                </td>
+                                <td>
+                                    <?php echo $booking["username"]; ?>
+                                    <input type="hidden" name="user_id" value="<?php echo $booking["user_id"]; ?>">
+                                </td>
+                                <td>
+                                    <?php echo $booking["car_name"]; ?>
+                                    <input type="hidden" name="car_id" value="<?php echo $booking["car_id"]; ?>">
+                                </td>
+                                <td>
+                                    <input type="date" name="pickup_date" value="<?php echo $booking["pickup_date"]; ?>" required>
+                                </td>
+                                <td>
+                                    <input type="date" name="takeoff_date" value="<?php echo $booking["takeoff_date"]; ?>" required>
+                                </td>
+                                <td>
+                                    <input type="hidden" name="update" value="<?php echo $booking["booking_id"]; ?>">
+                                    <button type="submit">[Update Booking]</button>
+                                </td>
+                            </form>
+                            <form method="POST">
+                                <td>
+                                    <input type="hidden" name="delete" value="<?php echo $booking["booking_id"]; ?>">
+                                    <button type="submit">[Cancel Booking]</button>
+                                </td>
+                            </form>
+                        </tr>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <?php foreach ($bookings as $booking): ?>
+                    <tr>
+                        <form method="POST">
+                            <td>
+                                <?php echo $booking["booking_id"]; ?>
+                            </td>
+                            <td>
+                                <?php echo $booking["username"]; ?>
+                                <input type="hidden" name="user_id" value="<?php echo $booking["user_id"]; ?>">
+                            </td>
+                            <td>
+                                <?php echo $booking["car_name"]; ?>
+                                <input type="hidden" name="car_id" value="<?php echo $booking["car_id"]; ?>">
+                            </td>
+                            <td>
+                                <input type="date" name="pickup_date" value="<?php echo $booking["pickup_date"]; ?>" required>
+                            </td>
+                            <td>
+                                <input type="date" name="takeoff_date" value="<?php echo $booking["takeoff_date"]; ?>" required>
+                            </td>
+                            <td>
+                                <input type="hidden" name="update" value="<?php echo $booking["booking_id"]; ?>">
+                                <button type="submit">[Update Booking]</button>
+                            </td>
+                        </form>
+                        <form method="POST">
+                            <td>
+                                <input type="hidden" name="delete" value="<?php echo $booking["booking_id"]; ?>">
+                                <button type="submit">[Cancel Booking]</button>
+                            </td>
+                        </form>
+                    </tr>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </tbody>
     </table>
 </section>

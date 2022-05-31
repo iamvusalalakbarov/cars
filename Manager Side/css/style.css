@@ -284,6 +284,10 @@ body main section {
   padding: 16px;
 }
 
+body main section .review-link {
+  color: #ea1b2d;
+}
+
 body main section .gif {
   height: 100%;
   display: -webkit-box;

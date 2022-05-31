@@ -20,7 +20,7 @@ $bookings = $db->query("SELECT * FROM bookings")->fetchAll(PDO::FETCH_ASSOC);
         <tbody>
             <?php foreach ($users as $user): ?>
                 <tr>
-                    <td><?php echo $user["username"]; ?></td>
+                    <td><a class="review-link" href="index.php?page=bookings&userid=<?php echo $user["user_id"]; ?>"><?php echo $user["username"]; ?></a></td>
                     <td><?php echo $user["firstname"]; ?></td>
                     <td><?php echo $user["surname"]; ?></td>
                     <td><?php echo $user["email"]; ?></td>
